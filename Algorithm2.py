@@ -17,12 +17,12 @@ def find():
     now=0 # 현재의 인덱스(밑변을 구하기 위함)
     for i in range(1,N+2): # 밑변을 쉽게 구하기위해 1부터 시작
         while(1):
-            if(s.is_empty()):# 스텍이 비어있을때 break
+            if(s.is_empty()):# 스택이 비어있을때 break
                 break
-            index = s.peek()# 스텍의 top값을 보여줌
+            index = s.peek()# 스택의 top값을 보여줌
             if(H[index]<H[i]):# 현재의 판자 높이가 전의 높이보다 크면 break
                 break
-            s.pop()# 스텍의 top값을 제거함
+            s.pop()# 스택의 top값을 제거함
 
             if(not s.is_empty()):
                 area = H[index]*(now - s.peek())# 넓이를 구함
